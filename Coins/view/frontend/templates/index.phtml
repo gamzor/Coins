@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Coins</th>
+    </tr>
+    <?php
+    /**
+     * @var \Kirill\Coins\Block\Index $block
+     */
+    ?>
+    <?php
+    $collection = $block->getResult();
+    foreach($collection as $item){
+    ?>
+    <tr>
+        <td><?php echo $item->getData('id'); ?></td>
+        <td><?php echo $item->getDate('coin'); ?></td>
+     </tr>
+     <?php } ?>
+</table>
